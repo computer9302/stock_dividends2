@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     @PostMapping("/signup")
-    public ResponseEntity<?> signup(@RequestBody Auth.SignUp request){
+    public ResponseEntity<?> signup(){
 
         return null;
     }
 
     @PostMapping("/signin")
-    public ResponseEntity<?> signin(@RequestBody Auth.SignIn request){
+    public ResponseEntity<?> signin(){
 
         return null;
     }
