@@ -27,15 +27,13 @@ public class YahooFinanceScraper {
         try {
             long now = System.currentTimeMillis() / 1000;
             String url = String.format(STATISTICS_URL, company.getTicker(), START_TIME, now);
-            System.out.println(url);
             Connection connection = Jsoup.connect(url)
                     .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36");
             Document document = connection.get();
 
 
             Elements parsingDivs = document.getElementsByAttributeValue("class", "table yf-ewueuo noDl");
-            System.out.println(parsingDivs);
-            // Elements eles = document.getElementsByAttributeValue("data-test", "historical-prices");
+
 
             Element tableEle = parsingDivs.get(0);
 
@@ -74,5 +72,9 @@ public class YahooFinanceScraper {
         }
 
         return scrapResult;
+    }
+
+    public Company scrapCompanyByTicker(String ticker){
+        return null;
     }
 }
