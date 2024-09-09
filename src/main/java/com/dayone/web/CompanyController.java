@@ -1,5 +1,6 @@
 package com.dayone.web;
 
+import com.dayone.model.Company;
 import com.dayone.model.constants.CacheKey;
 import com.dayone.persist.entity.CompanyEntity;
 import com.dayone.service.CompanyService;
@@ -11,9 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
-import com.dayone.model.Company;
-
-import java.util.List;
 
 
 @RestController

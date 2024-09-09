@@ -1,6 +1,5 @@
 package com.dayone.web;
 
-import com.dayone.model.ScrapedResult;
 import com.dayone.service.FinanceService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
