@@ -10,7 +10,6 @@ import com.dayone.persist.entity.DividendEntity;
 import com.dayone.scraper.Scraper;
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections4.Trie;
-import org.hibernate.cfg.NotYetImplementedException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -71,12 +70,6 @@ public class CompanyService {
 
     public void addAutocompleteKeyword(String keyword){
         this.trie.put(keyword, null);
-    }
-
-    public List<String> autocomplete(String keyword){
-        return (List<String>) this.trie.prefixMap(keyword).keySet()
-                .stream()
-                .collect(Collectors.toList());
     }
 
     public void deleteAutocompleteKeyword(String keyword){
